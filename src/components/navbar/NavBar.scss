@@ -1,0 +1,82 @@
+@import '../../styles/minxins.scss';
+
+.navbar {
+    position: relative;
+    background-color: var(--black);
+    padding-block: 0.6rem;
+
+    &-container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+    }
+
+    &-logo {
+       text-align: center;
+       border-radius: 10%;
+       padding: 10px 20px;
+       font-size: 20px;
+       color: var(--white);
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        @include respond(tab-port) {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            padding: 2rem;
+            background-color: var(--black);
+            flex-direction: column;
+            gap: 1.2rem;
+            align-items: center;
+            border-top: 1px solid var(--spanish-gray);
+            display: none;
+            z-index: 99;
+        }
+
+        a {
+            color: var(--white);
+            text-transform: uppercase;
+            transition: all .3s ease;
+
+            &:hover {
+                color: gray;
+            }
+        }
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-transform: capitalize;
+            color: var(--black);
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &-menu {
+        display: none;
+        color: var(--white);
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            display: inline-block;
+            font-size: 2.3rem;
+        }
+    }
+
+    .show {
+        display: flex;
+    }
+
+}

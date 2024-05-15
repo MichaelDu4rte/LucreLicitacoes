@@ -1,0 +1,42 @@
+@import '../../styles/minxins.scss';
+
+.hero {
+    padding-block: 8rem;
+
+    @include respond(tab-land) {
+        padding-block: 5rem;
+    }
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.wrapper {
+            margin-left: 80px;
+
+            @include respond(tab-land) {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-size: 3.3rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--white);
+
+        @include respond(phone) {
+            font-size: 2.4rem;
+        }
+    }
+
+    p {
+        margin-block: 1.5rem;
+        color: grey;
+        width: auto;
+    }
+}

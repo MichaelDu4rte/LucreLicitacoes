@@ -1,0 +1,54 @@
+@import '../../styles/minxins.scss';
+
+.card {
+    padding-block: 5rem;
+    background-image: url("../../assets/blur-bg.png");
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+
+    @include respond(tab-port) {
+        background: none;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 4rem;
+        text-transform: capitalize;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 3rem;
+    }
+
+    &-info {
+        background-color: var(--black);
+        text-align: center;
+        padding-block: 4rem;
+        border-radius: 2.5rem;
+        border: 1px solid var(--white);
+    }
+
+    img {
+        margin-inline: auto;
+        width: 5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        width: 290px;
+        margin: 0 auto;
+        margin-bottom: 0.8rem;
+        margin-top: 1rem;
+    }
+}
